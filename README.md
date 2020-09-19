@@ -71,10 +71,54 @@ Teniendo en cuenta el caso de estudio de arriba, podemos inferir que existen cua
  3. Profesor
  4. Escuela
 
-Donde, representado en forma de diagrama, obtenemos:
-
-![Imagen 1](imagen_diagrama_1.png)
-
 Obviamente estamos simplificando la situación y llevándola a lo ideal, donde no existen mas relaciones que las existentes en el diagrama. 
 
+Luego, convertido a código, podemos obtener las diferentes clases de cada una de las entidades, aunque en este caso nos centraremos solo en una sola (Persona, Alumno) para luego comenzar a explicar el por que de React en este ejemplo
+
+```javascript
+class Persona {
+	constructor(DNI, nombre, email){
+		this.DNI = DNI,
+		this.nombre = nombre,
+		this.email = email,
+	}
+}
+
+class Alumno {
+	constructor(DNI, GP, profesor){
+		this.DNI = DNI,
+		this.GP = GP
+		this.profesor = profesor
+	}
+}
+class 
+```
+
+Es importante entender que las clases estructuran como los datos van a ser mostrados, entendidos y manipulados luego en el sistema. Por eso es que muy importante definir bien los esquemas y estructuras que van a tomar nuestros datos. Acá podemos observar que un Alumno básicamente corresponde a una Persona, y quiero que mantengan esa relación en mente, porque vamos a empezar a construir nuestra idea en función de esta relación.
+
+## Pensar en React
+
+Comenzamos al fin, con React, nuestra herramienta elegida para materializar nuestra idea y convertirla en solución. Si llegaron hasta acá se preguntaran ¿por que diseñamos anteriormente nuestros datos primero? y la respuesta es mas sencilla de lo que parece, simplemente porque diseñar nos ahorra tiempo. Desde el momento cero sabemos como va a ser la forma de nuestra entidad persona, entendemos como Persona y Alumno se comportan y ademas, como si fuera poco, tenemos los datos que estas entidades van a contener dentro de nuestra aplicación. Ahora, ¿Que papel juega React en todo esto?
+
+Según la pagina oficial de la herramienta, 
+
+> React te ayuda a **crear interfaces de usuario** interactivas de forma sencilla. Diseña vistas simples para cada estado en tu aplicación...
+
+Analizando la frase, podemos hacer una inferencia y relacionar nuestros modelos a lo que React hace, interfaces, entonces, tomamos el lápiz y el papel (que estaban como requerimientos) y boceamos lo que vendría a ser lo que la persona observa en la aplicación cuando es un alumno, su perfil y la pagina principal:
+
+![enter image description here](vista_alumno)
+![enter image description here](vista_alumno_perfil)
+
+Como si de dibujos se trataran, ya tenemos la estructura de la aplicación, ahora vamos a empezar a desmembrar nuestro boceto y entender varios **conceptos esenciales de React** (a mi parecer, de los mas importantes)
+
+### Componentes
+
+### Propiedades
+
+### Estados
+
 ## Anexo
+
+### Como instalar Node.JS
+1. Ingresar al [sitio de Node.JS](https://nodejs.org/es/download/) y descargan cualquier version estable (LTS) del entorno Node.JS. 
+> Para los que no saben, Node es un entorno de ejecución, en el cual nos permite correr JavaScript fuera del contexto de un navegador. Esta basado en el motor de Javascript V8 diseñado por Google 
