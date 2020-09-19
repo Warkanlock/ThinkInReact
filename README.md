@@ -70,6 +70,8 @@ Teniendo en cuenta el caso de estudio de arriba, podemos inferir que existen cua
  2. Alumno
  3. Profesor
  4. Escuela
+ 
+ ![Diagrama de Clases](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/diagrama_entidades.png?token=ADFY5IBQSXHGDBIIXK5SPU27M2L22)
 
 Obviamente estamos simplificando la situación y llevándola a lo ideal, donde no existen mas relaciones que las existentes en el diagrama. 
 
@@ -106,8 +108,8 @@ Según la pagina oficial de la herramienta,
 
 Analizando la frase, podemos hacer una inferencia y relacionar nuestros modelos a lo que React hace, interfaces, entonces, tomamos el lápiz y el papel (que estaban como requerimientos) y boceamos lo que vendría a ser lo que la persona observa en la aplicación cuando es un alumno, su perfil y la pagina principal:
 
-![enter image description here](vista_alumno)
-![enter image description here](vista_alumno_perfil)
+![Pagina de Inicio](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/vista_alumno.png?token=ADFY5IDSKSFOPS5R6DUKNA27M2L5A)
+![Perfil de Usuario](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/vista_alumno_perfil.png?token=ADFY5IBUXU6L2URTBJA2M227M2L5C)
 
 Como si de dibujos se trataran, ya tenemos la estructura de la aplicación, ahora vamos a empezar a desmembrar nuestro boceto y entender varios **conceptos esenciales de React** (a mi parecer, de los mas importantes)
 
