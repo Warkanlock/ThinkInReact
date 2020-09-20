@@ -122,28 +122,32 @@ Según la pagina oficial de la herramienta,
 Analizando la frase, podemos hacer una inferencia y relacionar nuestros modelos a lo que React entienda e interprete, interfaces. Entonces, tomamos el lápiz y el papel (que estaban como requerimientos) y boceamos lo que vendría a ser lo que la persona observa en la aplicación cuando es un alumno, su perfil y la pagina principal:
 
 ##### Pagina de Inicio
-![Pagina de Inicio](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/vista_alumno.png?token=ADFY5IDSKSFOPS5R6DUKNA27M2L5A)
+![Pagina de Inicio](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/vista_alumno.png)
 
 ##### Perfil de Usuario
 
-![Perfil de Usuario](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/vista_alumno_perfil.png?token=ADFY5IBUXU6L2URTBJA2M227M2L5C)
+![Perfil de Usuario](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/vista_alumno_perfil.png)
 
 Ya tenemos la estructura de la aplicación, como se diagramara y como sera la aplicacion para los usuarios finales. Ahora vamos a empezar a desmembrar nuestro boceto y entender varios **conceptos esenciales de React** (a mi parecer, de los mas importantes).
 
 ### Componentes
 Para comprender realmente como React funciona tenemos que entender que son los componentes, y para eso, que mejor que mostrarlo mediante un ejemplo:
 
-Volviendo a la imagen anterior, la del perfil de usuario del alumno:
-
-Viendo la imagen, les propongo que hagan el ejemplo mental de dividir por funcionalidades la imagen, es decir, dividir por bloques cada parte de la imagen y entender que corresponde a que en cuanto a funcionalidades. 
+Volviendo a la imagen anterior, la del perfil de usuario del alumno. Viendo la imagen, les propongo que hagan el ejemplo mental de dividir por funcionalidades la imagen, es decir, dividir por bloques cada parte de la imagen y entender que corresponde a que en cuanto a funcionalidades. 
 
 React posee la simpleza de poder "separar" contenidos visuales y traspasarlos fácilmente a código.
 
-Comenzamos con la **vista general del perfil** y como podemos observar, hay una division lógica entre el encabezado de la pagina, la navegación y lo que respecta a la información del alumno
+Comenzamos con la **vista general del perfil** y como podemos observar, hay una division lógica entre el encabezado de la pagina y lo que respecta a la información del alumno
+
+![Primer Division](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/componentes_1.png)
 
 Ahora, imagínense como si estuviéramos observando el boceto, pero por capas, la primer capa, llamemos capa cero, representa un vistazo general del boceto, la division de funcionalidades mas superficial que engloba las funcionalidades similares. Ahora, observando la imagen, podemos ver que tenemos claramente dos nuevas divisiones: **PerfilUsuario** y **Navegación** (los nombres deben ser consistentes con las funcionalidades que se engloban para aumentar escalabilidad y mantenimiento de código). 
 
-Perfecto, iterando sobre las divisiones, independientemente una de la otra, obtenemos cada vez mas partes en cuestión pertenecientes a estas partes lógicas de la aplicación. Obteniendo así una estructura en árbol como la siguiente
+Perfecto, iterando sobre las divisiones, independientemente una de la otra, obtenemos cada vez mas partes en cuestión pertenecientes a estas partes lógicas de la aplicación.
+
+![Segunda Division](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/componentes_2.png)
+
+Transpasando las imagenes anteriores a algo mas cercano al codigo, podemos obtener así una estructura en árbol como la siguiente:
 
 ```
 VistaPerfil {
@@ -160,7 +164,7 @@ VistaPerfil {
 }
 ```
 
-Este ejercicio de iterar sobe ele diseño se puede realizar una y otra vez, siguiendo el pseudocodigo:
+Este ejercicio de iterar sobre el diseño se puede realizar una y otra vez, siguiendo el pseudocodigo:
 
 ```
 1. dividir funcionalidades logicas
@@ -175,6 +179,8 @@ Una vez que finalizamos la division de lógica dentro de nuestra vista, procedem
 
 > - En este tutorial utilizaremos la nueva nomenclatura de componentes desde React 16
 > -  **[JSX](https://es.reactjs.org/docs/introducing-jsx.html)** y por que definimos los objetos de esta manera en React
+
+#### Definicion de Componentes
 
 Para definir un componente en React usando componentes funcionales podemos usar:
 
@@ -280,7 +286,7 @@ function Padre(props){
 ```
 Visto gráficamente podemos observar algo de la manera:
 
-![enter image description here](mapa%20de%20estados)
+![Mapa de Estados](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/mapa_estados.png)
 
 Es importante entender que para compartir propiedades a través de muchos objetos no es necesario enviarlas com propiedades, de hecho esto es una mala practica y recibe el nombre de **[Prop Drilling](https://kentcdodds.com/blog/prop-drilling/)**. Es por eso, que existe algo llamado Contexto, que simplemente engloba un conjunto de ***estados*** para luego invocarlo sin necesidad de pasar todo como propiedades a los objetos.
 
