@@ -1,18 +1,17 @@
 
   
+![enter image description here](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/logo.png)  
 
-# ¿Cómo pensar el desarrollo web usando React? 
-
-#### Un tutorial para entender cómo idear y desarrollar ideas utilizando React
+## Un tutorial para entender cómo idear y desarrollar ideas utilizando React
 
 > Antes de empezar,  este no es un tutorial basado en etapas o pasos
-> para obtener un resultado funcional sino que centra la idea las bases
+> para obtener un resultado funcional sino que plantea la idea en las bases
 > fundamentales del desarrollo web usando React y proponiendo pequeños
 > fragmentos de código para ayudar al lector a la compresión.
 
 # Indice
 
-1. [Introducción](#introducción)
+1. [Introducción](#Introducción )
 2. [Requisitos](#requisitos)
 3. [Aprender a diseñar](#aprender-a-diseñar)
 4. [Sobre tutoriales y documentación](#sobre-tutoriales-y-documentación)
@@ -306,10 +305,11 @@ Visto gráficamente podemos observar algo de la manera:
 Es importante entender que para compartir propiedades a través de muchos objetos no es necesario enviarlas com propiedades, de hecho esto es una mala practica y recibe el nombre de **[Prop Drilling](https://kentcdodds.com/blog/prop-drilling/)**. Es por eso, que existe algo llamado Contexto, que simplemente engloba un conjunto de ***estados*** para luego invocarlo sin necesidad de pasar todo como propiedades a los objetos.
 
 ## Estados
-
+Los estados en React son valores que puede tomar un componente y existen dentro del mismo, no son provistos por nadie externo. Ejemplificando, el componente **Alumno** puede tomar de estado diferentes valores para una propiedad interna, y estos valores pueden alterar y/o decidir su comportamiento a la hora de mostrarse en nuestra aplicación. Existen maneras de manejar estados pero en este tutoriales vamos a usar los **[Hooks](https://es.reactjs.org/docs/hooks-intro.html)**
 
 # Uniendo todo
 ## Un ejemplo practico sencillo
+Ahora si, manos a la obra, vamos a llevar a código real y funcional la idea del sistema educativo que comentamos y usamos de ejemplo anteriormente.
 
 Espero que este tutorial no haya sido un tutorial mas de una larga lista de tutoriales sino algo que puedas entender con gusto y compartir a aquellas personas que intentan entender el flujo de information de estos días y largarse a desarrollar algo por su cuenta. El conocimiento por suerte, y hasta ahora, se comparte.
 
