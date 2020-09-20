@@ -146,16 +146,16 @@ Ahora, imagínense como si estuviéramos observando el boceto, pero por capas, l
 Perfecto, iterando sobre las divisiones, independientemente una de la otra, obtenemos cada vez mas partes en cuestión pertenecientes a estas partes lógicas de la aplicación. Obteniendo así una estructura en árbol como la siguiente
 
 ```json
-Usuario {
-	PerfilUsuario : [
-		DatosUsuario,
-		ImagenUsuario
-	],
+VistaPerfil {
 	Navegacion : [
 		Encabezado : [
 			Logo
 		],
 		Menu
+	],
+	PerfilUsuario : [
+		DatosUsuario,
+		ImagenUsuario
 	]
 }
 ```
@@ -173,15 +173,29 @@ Este ejercicio de iterar sobe ele diseño se puede realizar una y otra vez, sigu
 
 Una vez que finalizamos la division de lógica dentro de nuestra vista, procedemos a crear los componentes, tal cual se representan en el árbol.
 
-> En este tutorial utilizaremos la nueva nomenclatura de
-> componentes de React 16
+> - En este tutorial utilizaremos la nueva nomenclatura de componentes desde React 16
+> - Ver Anexo para entender JSX y por que definimos los objetos de esta manera en React
 
-Por lo que obtenemos, a modo de ejemplo:
+Para definir un componente en React usando componentes funcionales podemos usar:
+
+```javascript
+const NombreDeLaFuncion = (parametros) => {
+	//funcionalidad
+}
+
+function NombreDeLaFuncion(parametros){
+	//funcionalidad
+}
+```
+
+Ambas son correctas e igualmente validas.
+
+Entonces definiendo la estructura superior de nuestra aplicación para la Vista de Perfil, obtenemos:
 
 ```javascript
 import React from 'react';
-import Navegacion from './src/components/Navegacion';
-import PerfilUsuario from './src/components/PerfilUsuario';
+import Navegacion from './src/components/Shared/Navegacion';
+import PerfilUsuario from './src/components/Perfil/PerfilUsuario';
 
 const VistaPerfil = () => {
 	return (
@@ -192,8 +206,18 @@ const VistaPerfil = () => {
 	);
 }; 
 
-export default PerfilUsuario;
+const PerfilUsuario = () => {
+}
+
+const Navegacion = () => {
+}
+
+export default VistaPerfil;
+
+(pueden ver como quedaría la estructura general en la carpeta /src/components)
 ```
+
+De esta manera podemos decir que bajamos a tierra lo visual al código, es decir, todo lo que exista dentro de los archivos **Navegacion** y **PerfilUsuario**, se van a mostrar gracias al componente **VistaPerfil**, y sea donde sea que llamemos al componente **VistaPerfil**, ahí estarán y serán mostrados nuestros componentes, contenidos dentro. 
 
 ### Propiedades
 
@@ -211,3 +235,5 @@ Ignacio
 ### Como instalar Node.JS
 1. Ingresar al [sitio de Node.JS](https://nodejs.org/es/download/) y descargan cualquier version estable (LTS) del entorno Node.JS. 
 > Para los que no saben, Node es un entorno de ejecución, en el cual nos permite correr JavaScript fuera del contexto de un navegador. Esta basado en el motor de Javascript V8 diseñado por Google 
+> 
+### JSX
