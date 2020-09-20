@@ -1,4 +1,5 @@
 
+  
 
 # ¿Cómo pensar el desarrollo web usando React? 
 
@@ -9,7 +10,21 @@
 > fundamentales del desarrollo web usando React y proponiendo pequeños
 > fragmentos de código para ayudar al lector a la compresión.
 
-## Introducción 
+# Indice
+
+1. [Introducción](#introducción)
+2. [Requisitos](#requisitos)
+3. [Aprender a diseñar](#aprender-a-diseñar)
+4. [Sobre tutoriales y documentación](#sobre-tutoriales-y-documentación)
+5. [Elegir luego emprender](#elegir-luego-emprender)
+6. [Por que React](#por-que-react)
+7. [Caso de Ejemplo](#caso-de-ejemplo)
+8. [Pensar en React](#pensar-en-react)
+9. [Uniendo todo](#uniendo-todo)
+10. [Anexo](#anexo)
+
+
+# Introducción 
 
 > “We’re all optimists in our profession or we’d be forced to shoot ourselves." Joshua Bloch
 > 
@@ -23,7 +38,7 @@ Muchas preguntas para una persona que recién empieza y quiere arrancar con el d
 
 Sin más preámbulos, comencemos... 
 
-## Requisitos
+# Requisitos
 Para seguir este tutorial vamos a necesitar, antes que nada:
 
  - [x] Lápiz y Papel
@@ -33,7 +48,7 @@ Para seguir este tutorial vamos a necesitar, antes que nada:
  - [x] Conocimientos sobre Modelado de Entidades 
  - [x] Conocimientos básicos sobre computación 
 
-## ¿Comenzar? Enseñar a diseñar
+# Aprender a diseñar
 Primero que nada hay que tener en claro dos cosas y en el camino, desmentir mitos comunes:
 
 **Programar es una tarea relativamente sencilla**
@@ -44,7 +59,7 @@ En cuanto a programar respecta, tenemos que entender y dejar de verlo con miedo 
 
 Acá es donde la automatización comienza a caerse a pedazos. Ninguna máquina puede entender lo que pensamos con la misma claridad e interpretación. La capacidad de entender lo que las personas quieren es lo que nos diferencia de las computadoras y es por eso que nuestro trabajo no es programar sino diseñar soluciones que nos faciliten la vida un poco más que ayer. 
 
-## Sobre tutoriales y documentación
+# Sobre tutoriales y documentación
 
 > “Nobody ever figures out what life is all about, and it doesn't
 > matter. Explore the world. Nearly everything is really interesting if
@@ -59,19 +74,19 @@ Sucede que uno busca un tutorial especifico de algo especifico y luego intentar 
 
 Los tutoriales son útiles, no crean que no, pero para entender el potencial de una herramienta y no para generar código util listo para producción. **Es por eso que en este tutorial no vamos a seguir pasos sino consejos, útiles para aquellos que están arrancando a decidir que utilizar para construir sus ideas.** 
 
-## Elegir luego emprender
+# Elegir luego emprender
 Herramientas, estilos, patrones, diferencias las hay. El problema, la mayoría de las veces es elegir mal y terminar adaptando lo que hacemos en función de la herramienta que tenemos. Más allá de limitaciones técnicas, es interesante entender que cuando nuestros problemas están siendo modificados y acotados constantemente por las herramientas que elegimos para solucionarlos, claramente estamos ante la clara mala elección de la herramienta. 
 
 Entender el **como** es una lucha constante entre la *herramienta que usamos y la teoría agnóstica* y aplicar justamente este "**como hacerlo**" a nuestro problema y convertirlo en una solución util es un tema complejo. Es por eso que para este tutorial, voy a presentar un caso de uso acotado, un **problema** con su respectiva **solución**, para que podamos entender el **como** y el **por que** de React como librería desarrollo web.
 
-## ¿Por qué React?
+# Por que React
 Después de jugar con varias herramientas, desde **Angular** hasta Razor Views de **.NET** no puedo lograr liberarme de la sencillez que me provee React a la hora de conectar: pensamiento con diseño. 
 
 React nos presenta la oportunidad única de olvidarnos de la pregunta ¿Cómo ***hacer esto*** en esta herramienta? y preguntarnos ¿Cómo ***diseñar esto*** usando React?
 
 Un libro muy interesante, orientado al diseño y que les recomiendo para aprender a pensar en el usuario primero es [Design of Everyday Things](https://www.amazon.com/-/es/Don-Norman/dp/0465050654) de Don Norman.
 
-## Caso de Ejemplo
+# Caso de Ejemplo
 
 El sistema que vamos a proponer diseñar en este tutorial esta basado en un pequeño sistema informático, capaz de actualizar currículos de estudio para así mantener sincronizadas a las demás escuelas y que de esta manera, los alumnos puedan consultarlas y aferrarse de un camino de estudio al que seguir, sin necesidad de asistir a una escuela en especifica.
 
@@ -111,7 +126,7 @@ class
 
 Es importante entender que las clases estructuran como los datos van a ser mostrados, entendidos y manipulados luego en el sistema. Por eso es que muy importante definir bien los esquemas y estructuras que van a tomar nuestros datos. Acá podemos observar que un Alumno básicamente corresponde a una Persona, y quiero que mantengan esa relación en mente, porque vamos a empezar a construir nuestra idea en función de esta relación.
 
-## Pensar en React
+# Pensar en React
 
 **React** (haciendo la vista gorda obviamente a toda la historia del desarrollo web) y su manejo **virtual del DOM**, nuestra herramienta elegida para materializar nuestra idea y convertirla en solución. Si llegaron hasta acá se preguntaran ¿por que diseñamos anteriormente nuestros datos primero? y la respuesta es mas sencilla de lo que parece, simplemente porque diseñar nos ahorra tiempo. Desde el momento cero sabemos como va a ser la forma de nuestra entidad persona, entendemos como Persona y Alumno se comportan y ademas, como si fuera poco, tenemos los datos que estas entidades van a contener dentro de nuestra aplicación. Ahora, ¿Que papel juega React en todo esto?
 
@@ -130,7 +145,7 @@ Analizando la frase, podemos hacer una inferencia y relacionar nuestros modelos 
 
 Ya tenemos la estructura de la aplicación, como se diagramara y como sera la aplicacion para los usuarios finales. Ahora vamos a empezar a desmembrar nuestro boceto y entender varios **conceptos esenciales de React** (a mi parecer, de los mas importantes).
 
-### Componentes
+## Componentes
 Para comprender realmente como React funciona tenemos que entender que son los componentes, y para eso, que mejor que mostrarlo mediante un ejemplo:
 
 Volviendo a la imagen anterior, la del perfil de usuario del alumno. Viendo la imagen, les propongo que hagan el ejemplo mental de dividir por funcionalidades la imagen, es decir, dividir por bloques cada parte de la imagen y entender que corresponde a que en cuanto a funcionalidades. 
@@ -180,7 +195,7 @@ Una vez que finalizamos la division de lógica dentro de nuestra vista, procedem
 > - En este tutorial utilizaremos la nueva nomenclatura de componentes desde React 16
 > -  **[JSX](https://es.reactjs.org/docs/introducing-jsx.html)** y por que definimos los objetos de esta manera en React
 
-#### Definicion de Componentes
+### Definicion de Componentes
 
 Para definir un componente en React usando componentes funcionales:
 
@@ -225,7 +240,7 @@ export default VistaPerfil;
 
 De esta manera podemos decir que bajamos a tierra lo visual al código, es decir, todo lo que exista dentro de los archivos **Navegacion** y **PerfilUsuario**, se van a mostrar gracias al componente **VistaPerfil**, y sea donde sea que llamemos al componente **VistaPerfil**, ahí estarán y serán mostrados los componentes que yacen dentro. 
 
-### Propiedades
+## Propiedades
 
 ¿Que sucede cuando queremos comunicar un mensaje a un componente? Imaginemos la situación donde un Alumno, en su perfil, quiere cambiar su nombre de usuario. Entendiendo este ejemplo, podemos ver que el nombre de usuario radica en la sección lógica ahora llamada *DatosUsuario* (observando el diagrama) dicho esto: **tenemos que identificar ahora, las propiedades de nuestros componentes**. Al igual que como hicimos con los componentes, podemos realizar lo mismo con las propiedades que van a existir dentro de cada uno de los componentes.
 
@@ -235,7 +250,7 @@ Pero antes, ¿Que son las propiedades?
 
 Clarificando y llevando a tierra esta definición un poco abstracta, podemos decir que **las propiedades son valores con los cuales un objeto se comunica, hacia arriba o hacia abajo, para persistir un tipo de estado**, con sus hijos (componentes interiores) y con su padre (componente que lo engloba).  Y si, técnicamente son un argumento que es pasado dentro de una función y para utilizarlos podemos tomar el siguiente código de ejemplo, en el cual un padre crea un hijo y le otorga un nombre, para luego entender como es que funciona la comunicación entre componentes usando propiedades:
 
-#### Comunicación hacia abajo (del padre al hijo)
+### Comunicación hacia abajo (del padre al hijo)
 
 Podemos definir nuevas propiedades agregando valores de la forma:
 
@@ -259,7 +274,7 @@ function Hijo(props){
 }
 ```
 
-#### Comunicación hacia arriba (del hijo al padre)
+### Comunicación hacia arriba (del hijo al padre)
 
 Es un poco mas complejo y no funciona a través de valores directos sino a través de los llamados callbacks, que simplemente son funciones que son llamadas desde el hijo pero que su contexto de ejecución existe en el padre:
 
@@ -290,8 +305,11 @@ Visto gráficamente podemos observar algo de la manera:
 
 Es importante entender que para compartir propiedades a través de muchos objetos no es necesario enviarlas com propiedades, de hecho esto es una mala practica y recibe el nombre de **[Prop Drilling](https://kentcdodds.com/blog/prop-drilling/)**. Es por eso, que existe algo llamado Contexto, que simplemente engloba un conjunto de ***estados*** para luego invocarlo sin necesidad de pasar todo como propiedades a los objetos.
 
-### Estados
+## Estados
 
+
+# Uniendo todo
+## Un ejemplo practico sencillo
 
 Espero que este tutorial no haya sido un tutorial mas de una larga lista de tutoriales sino algo que puedas entender con gusto y compartir a aquellas personas que intentan entender el flujo de information de estos días y largarse a desarrollar algo por su cuenta. El conocimiento por suerte, y hasta ahora, se comparte.
 
