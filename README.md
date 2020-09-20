@@ -145,7 +145,7 @@ Ahora, imagínense como si estuviéramos observando el boceto, pero por capas, l
 
 Perfecto, iterando sobre las divisiones, independientemente una de la otra, obtenemos cada vez mas partes en cuestión pertenecientes a estas partes lógicas de la aplicación. Obteniendo así una estructura en árbol como la siguiente
 
-```json
+```
 VistaPerfil {
 	Navegacion : [
 		Encabezado : [
@@ -174,7 +174,7 @@ Este ejercicio de iterar sobe ele diseño se puede realizar una y otra vez, sigu
 Una vez que finalizamos la division de lógica dentro de nuestra vista, procedemos a crear los componentes, tal cual se representan en el árbol.
 
 > - En este tutorial utilizaremos la nueva nomenclatura de componentes desde React 16
-> - Ver Anexo para entender JSX y por que definimos los objetos de esta manera en React
+> -  **[JSX](https://es.reactjs.org/docs/introducing-jsx.html)** y por que definimos los objetos de esta manera en React
 
 Para definir un componente en React usando componentes funcionales podemos usar:
 
@@ -190,7 +190,7 @@ function NombreDeLaFuncion(parametros){
 
 Ambas son correctas e igualmente validas.
 
-Entonces definiendo la estructura superior de nuestra aplicación para la Vista de Perfil, obtenemos:
+Entonces definiendo la estructura de nuestra aplicación para la Vista de Perfil, obtenemos:
 
 ```javascript
 import React from 'react';
@@ -217,10 +217,72 @@ export default VistaPerfil;
 (pueden ver como quedaría la estructura general en la carpeta /src/components)
 ```
 
-De esta manera podemos decir que bajamos a tierra lo visual al código, es decir, todo lo que exista dentro de los archivos **Navegacion** y **PerfilUsuario**, se van a mostrar gracias al componente **VistaPerfil**, y sea donde sea que llamemos al componente **VistaPerfil**, ahí estarán y serán mostrados nuestros componentes, contenidos dentro. 
+De esta manera podemos decir que bajamos a tierra lo visual al código, es decir, todo lo que exista dentro de los archivos **Navegacion** y **PerfilUsuario**, se van a mostrar gracias al componente **VistaPerfil**, y sea donde sea que llamemos al componente **VistaPerfil**, ahí estarán y serán mostrados los componentes que yacen dentro. 
 
 ### Propiedades
 
+¿Que sucede cuando queremos comunicar un mensaje a un componente? Imaginemos la situación donde un Alumno, en su perfil, quiere cambiar su nombre de usuario. Entendiendo este ejemplo, podemos ver que el nombre de usuario radica en la sección lógica ahora llamada *DatosUsuario* (observando el diagrama) dicho esto: **tenemos que identificar ahora, las propiedades de nuestros componentes**. Al igual que como hicimos con los componentes, podemos realizar lo mismo con las propiedades que van a existir dentro de cada uno de los componentes.
+
+Pero antes, ¿Que son las propiedades? 
+
+> Según React, las propiedades no son mas que argumentos que se pasan a nuestras funciones.
+
+Clarificando y llevando a tierra esta definición un poco abstracta, podemos decir que **las propiedades son valores con los cuales un objeto se comunica, hacia arriba o hacia abajo, para persistir un tipo de estado**, con sus hijos (componentes interiores) y con su padre (componente que lo engloba).  Y si, técnicamente son un argumento que es pasado dentro de una función y para utilizarlos podemos tomar el siguiente código de ejemplo, en el cual un padre crea un hijo y le otorga un nombre, para luego entender como es que funciona la comunicación entre componentes usando propiedades:
+
+#### Comunicación hacia abajo (del padre al hijo)
+
+Podemos definir nuevas propiedades agregando valores de la forma:
+
+```javascript
+<Componente prop1="test" prop2="tutorial" prop3={key:value}></Componente>
+```
+
+Y prácticamente podemos enviar cualquier tipo de objeto admitido por el motor de ejecución de JavaScript que estemos usando, es por eso que para comunicarnos con los componentes hijos de un padre, hacemos lo siguiente:
+
+```javascript
+function Padre(props){
+	return (
+		<>
+			<Hijo nombre="Jeremias"></Hijo>
+		</>
+	);
+}
+
+function Hijo(props){
+	console.log(this.props.nombre) //me 
+}
+```
+
+#### Comunicación hacia arriba (del hijo al padre)
+
+Es un poco mas complejo y no funciona a través de valores directos sino a través de los llamados callbacks, que simplemente son funciones que son llamadas desde el hijo pero que su contexto de ejecución existe en el padre:
+
+```javascript
+function Hijo(props){
+	if(this.props.nombre == 'Jeremias'){
+		const valorAEnviarAlPadre = 42;
+		this.props.callback(valorAEnviarAlPadre);  
+		//FuncionAEjecutar va a existir en el padre y la vamos a llamar desde el hijo
+	}
+}
+
+function Padre(props){
+	const FuncionAEjecutar = (valor) => {
+		console.log(valor) // 42
+	}	
+
+	return (
+		<>
+			<Hijo nombre='Jeremias' callback=FuncionAEjecutar></Hijo>
+		</>
+	);
+}
+```
+Visto gráficamente podemos observar algo de la manera:
+
+![enter image description here](mapa%20de%20estados)
+
+Es importante entender que para compartir propiedades a través de muchos objetos no es necesario enviarlas com propiedades, de hecho esto es una mala practica y recibe el nombre de **[Prop Drilling](https://kentcdodds.com/blog/prop-drilling/)**. Es por eso, que existe algo llamado Contexto, que simplemente engloba un conjunto de ***estados*** para luego invocarlo sin necesidad de pasar todo como propiedades a los objetos.
 
 ### Estados
 
@@ -235,5 +297,4 @@ Ignacio
 ### Como instalar Node.JS
 1. Ingresar al [sitio de Node.JS](https://nodejs.org/es/download/) y descargan cualquier version estable (LTS) del entorno Node.JS. 
 > Para los que no saben, Node es un entorno de ejecución, en el cual nos permite correr JavaScript fuera del contexto de un navegador. Esta basado en el motor de Javascript V8 diseñado por Google 
-> 
-### JSX
+>
