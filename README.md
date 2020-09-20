@@ -1,5 +1,6 @@
 
-# ¿Cómo repensar el desarrollo web usando React? 
+
+# ¿Cómo pensar el desarrollo web usando React? 
 
 #### Un tutorial para entender cómo idear y desarrollar ideas utilizando React
 
@@ -100,7 +101,11 @@ Es importante entender que las clases estructuran como los datos van a ser mostr
 
 ## Pensar en React
 
-Comenzamos al fin, con React, nuestra herramienta elegida para materializar nuestra idea y convertirla en solución. Si llegaron hasta acá se preguntaran ¿por que diseñamos anteriormente nuestros datos primero? y la respuesta es mas sencilla de lo que parece, simplemente porque diseñar nos ahorra tiempo. Desde el momento cero sabemos como va a ser la forma de nuestra entidad persona, entendemos como Persona y Alumno se comportan y ademas, como si fuera poco, tenemos los datos que estas entidades van a contener dentro de nuestra aplicación. Ahora, ¿Que papel juega React en todo esto?
+Si tenemos en cuenta como se desarrollaban sitios web en el pasado nos vemos motivados por entender que lo que se hacia era **pensar al sitio web como un todo** en donde poco a poco se le iban a agregando funcionalidades, módulos y vistas, que luego iban a ser devuelta desde el servidor al cliente y en las cuales no existía el reciclaje de objetos o el dinamismo (hasta la aparición de AJAX). Ademas, cada "rama" de nuestra pagina web, presentaba su propia "lógica interna", donde una tarea sencilla como modificar un cuadro de búsqueda requería entender y aplicar una lógica especifica que tal vez no aplicaba para la aplicación en su totalidad. Hoy en día esto se ve como algo muy lejano pero que, en su momento, era la única forma concebible de crear una pagina web. Montar un servidor, programar la lógica, devolver una vista cruda de HTML y ante una nueva petición del usuario, devolverle una nueva vista pero actualizada a lo que el usuario solicitaba. Esto, ademas de costoso a nivel de recursos, era lento. Muy lento. Es por eso que después de discusiones internas el equipo de Facebook se pregunto:
+
+**¡¿Por que recargar el DOM, una y otra vez, si un solo objeto independiente y aislado de la aplicación, cambiaba?!**
+
+Y es acá, donde nace **React** (haciendo la vista gorda obviamente a toda la historia del desarrollo web) y su manejo **virtual del DOM**, nuestra herramienta elegida para materializar nuestra idea y convertirla en solución. Si llegaron hasta acá se preguntaran ¿por que diseñamos anteriormente nuestros datos primero? y la respuesta es mas sencilla de lo que parece, simplemente porque diseñar nos ahorra tiempo. Desde el momento cero sabemos como va a ser la forma de nuestra entidad persona, entendemos como Persona y Alumno se comportan y ademas, como si fuera poco, tenemos los datos que estas entidades van a contener dentro de nuestra aplicación. Ahora, ¿Que papel juega React en todo esto?
 
 Según la pagina oficial de la herramienta, 
 
@@ -115,9 +120,16 @@ Ya tenemos la estructura de la aplicación, como se diagramara y como sera la ap
 
 ### Componentes
 
+
 ### Propiedades
 
+
 ### Estados
+
+Espero que este tutorial no haya sido un tutorial mas de una larga lista de tutoriales sino algo que puedas entender con gusto y compartir a aquellas personas que intentan entender el flujo de information de estos días y largarse a desarrollar algo por su cuenta. El conocimiento por suerte, y hasta ahora, se comparte.
+
+Gracias por leer,
+Ignacio
 
 ## Anexo
 
