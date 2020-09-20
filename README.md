@@ -1,5 +1,6 @@
 
-# ¿Cómo repensar el desarrollo web usando React? 
+
+# ¿Cómo pensar el desarrollo web usando React? 
 
 #### Un tutorial para entender cómo idear y desarrollar ideas utilizando React
 
@@ -70,6 +71,8 @@ Teniendo en cuenta el caso de estudio de arriba, podemos inferir que existen cua
  2. Alumno
  3. Profesor
  4. Escuela
+ 
+ ![Diagrama de Clases](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/diagrama_entidades.png?token=ADFY5IBQSXHGDBIIXK5SPU27M2L22)
 
 Obviamente estamos simplificando la situación y llevándola a lo ideal, donde no existen mas relaciones que las existentes en el diagrama. 
 
@@ -98,24 +101,35 @@ Es importante entender que las clases estructuran como los datos van a ser mostr
 
 ## Pensar en React
 
-Comenzamos al fin, con React, nuestra herramienta elegida para materializar nuestra idea y convertirla en solución. Si llegaron hasta acá se preguntaran ¿por que diseñamos anteriormente nuestros datos primero? y la respuesta es mas sencilla de lo que parece, simplemente porque diseñar nos ahorra tiempo. Desde el momento cero sabemos como va a ser la forma de nuestra entidad persona, entendemos como Persona y Alumno se comportan y ademas, como si fuera poco, tenemos los datos que estas entidades van a contener dentro de nuestra aplicación. Ahora, ¿Que papel juega React en todo esto?
+Si tenemos en cuenta como se desarrollaban sitios web en el pasado nos vemos motivados por entender que lo que se hacia era **pensar al sitio web como un todo** en donde poco a poco se le iban a agregando funcionalidades, módulos y vistas, que luego iban a ser devuelta desde el servidor al cliente y en las cuales no existía el reciclaje de objetos o el dinamismo (hasta la aparición de AJAX). Ademas, cada "rama" de nuestra pagina web, presentaba su propia "lógica interna", donde una tarea sencilla como modificar un cuadro de búsqueda requería entender y aplicar una lógica especifica que tal vez no aplicaba para la aplicación en su totalidad. Hoy en día esto se ve como algo muy lejano pero que, en su momento, era la única forma concebible de crear una pagina web. Montar un servidor, programar la lógica, devolver una vista cruda de HTML y ante una nueva petición del usuario, devolverle una nueva vista pero actualizada a lo que el usuario solicitaba. Esto, ademas de costoso a nivel de recursos, era lento. Muy lento. Es por eso que después de discusiones internas el equipo de Facebook se pregunto:
+
+**¡¿Por que recargar el DOM, una y otra vez, si solo un objeto independiente y aislado de la aplicación, cambia?!**
+
+Y es acá, donde nace **React** (haciendo la vista gorda obviamente a toda la historia del desarrollo web) y su manejo **virtual del DOM**, nuestra herramienta elegida para materializar nuestra idea y convertirla en solución. Si llegaron hasta acá se preguntaran ¿por que diseñamos anteriormente nuestros datos primero? y la respuesta es mas sencilla de lo que parece, simplemente porque diseñar nos ahorra tiempo. Desde el momento cero sabemos como va a ser la forma de nuestra entidad persona, entendemos como Persona y Alumno se comportan y ademas, como si fuera poco, tenemos los datos que estas entidades van a contener dentro de nuestra aplicación. Ahora, ¿Que papel juega React en todo esto?
 
 Según la pagina oficial de la herramienta, 
 
 > React te ayuda a **crear interfaces de usuario** interactivas de forma sencilla. Diseña vistas simples para cada estado en tu aplicación...
 
-Analizando la frase, podemos hacer una inferencia y relacionar nuestros modelos a lo que React hace, interfaces, entonces, tomamos el lápiz y el papel (que estaban como requerimientos) y boceamos lo que vendría a ser lo que la persona observa en la aplicación cuando es un alumno, su perfil y la pagina principal:
+Analizando la frase, podemos hacer una inferencia y relacionar nuestros modelos a lo que React entienda e interprete, interfaces. Entonces, tomamos el lápiz y el papel (que estaban como requerimientos) y boceamos lo que vendría a ser lo que la persona observa en la aplicación cuando es un alumno, su perfil y la pagina principal:
 
-![enter image description here](vista_alumno)
-![enter image description here](vista_alumno_perfil)
+![Pagina de Inicio](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/vista_alumno.png?token=ADFY5IDSKSFOPS5R6DUKNA27M2L5A)
+![Perfil de Usuario](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/vista_alumno_perfil.png?token=ADFY5IBUXU6L2URTBJA2M227M2L5C)
 
-Como si de dibujos se trataran, ya tenemos la estructura de la aplicación, ahora vamos a empezar a desmembrar nuestro boceto y entender varios **conceptos esenciales de React** (a mi parecer, de los mas importantes)
+Ya tenemos la estructura de la aplicación, como se diagramara y como sera la aplicacion para los usuarios finales. Ahora vamos a empezar a desmembrar nuestro boceto y entender varios **conceptos esenciales de React** (a mi parecer, de los mas importantes).
 
 ### Componentes
 
+
 ### Propiedades
 
+
 ### Estados
+
+Espero que este tutorial no haya sido un tutorial mas de una larga lista de tutoriales sino algo que puedas entender con gusto y compartir a aquellas personas que intentan entender el flujo de information de estos días y largarse a desarrollar algo por su cuenta. El conocimiento por suerte, y hasta ahora, se comparte.
+
+Gracias por leer,
+Ignacio
 
 ## Anexo
 
