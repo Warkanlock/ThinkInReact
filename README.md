@@ -182,7 +182,7 @@ Una vez que finalizamos la division de lógica dentro de nuestra vista, procedem
 
 #### Definicion de Componentes
 
-Para definir un componente en React usando componentes funcionales podemos usar:
+Para definir un componente en React usando componentes funcionales:
 
 ```javascript
 const NombreDeLaFuncion = (parametros) => {
