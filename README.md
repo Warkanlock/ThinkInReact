@@ -4,10 +4,15 @@
 
 #### Un tutorial para entender cómo idear y desarrollar ideas utilizando React
 
-> “We’re all optimists in our profession or we’d be forced to shoot ourselves." Joshua Bloch
+> Antes de empezar,  este no es un tutorial basado en etapas o pasos
+> para obtener un resultado funcional sino que centra la idea las bases
+> fundamentales del desarrollo web usando React y proponiendo pequeños
+> fragmentos de código para ayudar al lector a la compresión.
 
 ## Introducción 
 
+> “We’re all optimists in our profession or we’d be forced to shoot ourselves." Joshua Bloch
+> 
 Año tras año, la comunidad web ha ganado adeptos y aunque esto no es ninguna ciencia, hoy por hoy ingresar al mundo del desarrollo web nunca fue tan fácil (y tan complejo a la vez). La idea fundamental de este tutorial no es enseñar a crear sino a pensar para que ustedes puedan luego, crear.
 
 En términos de decisiones y técnicas, nunca fue tan difícil elegir una que se adapte a los que busquemos realmente, sin antes encontrar veinte alternativas similares que a primera vista, se adaptan a lo que buscábamos desde un principio, pero sin antes dar el paso en falso: debemos entender que cada una existe producto de una problemática ajena a nuestra realidad. Es por eso que uno debe interpretar primero dónde está parado para luego comenzar a desarrollar una idea y convertirla en realidad. Cada vez más en el mundo del desarrollo, muchos ante la primera distracción, desvían la atención de lo que vale la pena realmente. 
@@ -59,6 +64,13 @@ Herramientas, estilos, patrones, diferencias las hay. El problema, la mayoría d
 
 Entender el **como** es una lucha constante entre la *herramienta que usamos y la teoría agnóstica* y aplicar justamente este "**como hacerlo**" a nuestro problema y convertirlo en una solución util es un tema complejo. Es por eso que para este tutorial, voy a presentar un caso de uso acotado, un **problema** con su respectiva **solución**, para que podamos entender el **como** y el **por que** de React como librería desarrollo web.
 
+## ¿Por qué React?
+Después de jugar con varias herramientas, desde **Angular** hasta Razor Views de **.NET** no puedo lograr liberarme de la sencillez que me provee React a la hora de conectar: pensamiento con diseño. 
+
+React nos presenta la oportunidad única de olvidarnos de la pregunta ¿Cómo ***hacer esto*** en esta herramienta? y preguntarnos ¿Cómo ***diseñar esto*** usando React?
+
+Un libro muy interesante, orientado al diseño y que les recomiendo para aprender a pensar en el usuario primero es [Design of Everyday Things](https://www.amazon.com/-/es/Don-Norman/dp/0465050654) de Don Norman.
+
 ## Caso de Ejemplo
 
 El sistema que vamos a proponer diseñar en este tutorial esta basado en un pequeño sistema informático, capaz de actualizar currículos de estudio para así mantener sincronizadas a las demás escuelas y que de esta manera, los alumnos puedan consultarlas y aferrarse de un camino de estudio al que seguir, sin necesidad de asistir a una escuela en especifica.
@@ -72,25 +84,25 @@ Teniendo en cuenta el caso de estudio de arriba, podemos inferir que existen cua
  3. Profesor
  4. Escuela
  
- ![Diagrama de Clases](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/diagrama_entidades.png?token=ADFY5IBQSXHGDBIIXK5SPU27M2L22)
+ ![Diagrama de Clases](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/diagrama_entidades.png)
 
 Obviamente estamos simplificando la situación y llevándola a lo ideal, donde no existen mas relaciones que las existentes en el diagrama. 
 
 Luego, convertido a código, podemos obtener las diferentes clases de cada una de las entidades, aunque en este caso nos centraremos solo en una sola (Persona, Alumno) para luego comenzar a explicar el por que de React en este ejemplo
 
 ```javascript
-class Persona {
+export class Persona {
 	constructor(DNI, nombre, email){
 		this.DNI = DNI,
 		this.nombre = nombre,
-		this.email = email,
+		this.email = email
 	}
 }
 
-class Alumno {
-	constructor(DNI, GP, profesor){
-		this.DNI = DNI,
-		this.GP = GP
+export class Alumno {
+	constructor(persona, GP, profesor){
+		this.persona = persona,
+		this.GP = GP,
 		this.profesor = profesor
 	}
 }
@@ -101,11 +113,7 @@ Es importante entender que las clases estructuran como los datos van a ser mostr
 
 ## Pensar en React
 
-Si tenemos en cuenta como se desarrollaban sitios web en el pasado nos vemos motivados por entender que lo que se hacia era **pensar al sitio web como un todo** en donde poco a poco se le iban a agregando funcionalidades, módulos y vistas, que luego iban a ser devuelta desde el servidor al cliente y en las cuales no existía el reciclaje de objetos o el dinamismo (hasta la aparición de AJAX). Ademas, cada "rama" de nuestra pagina web, presentaba su propia "lógica interna", donde una tarea sencilla como modificar un cuadro de búsqueda requería entender y aplicar una lógica especifica que tal vez no aplicaba para la aplicación en su totalidad. Hoy en día esto se ve como algo muy lejano pero que, en su momento, era la única forma concebible de crear una pagina web. Montar un servidor, programar la lógica, devolver una vista cruda de HTML y ante una nueva petición del usuario, devolverle una nueva vista pero actualizada a lo que el usuario solicitaba. Esto, ademas de costoso a nivel de recursos, era lento. Muy lento. Es por eso que después de discusiones internas el equipo de Facebook se pregunto:
-
-**¡¿Por que recargar el DOM, una y otra vez, si solo un objeto independiente y aislado de la aplicación, cambia?!**
-
-Y es acá, donde nace **React** (haciendo la vista gorda obviamente a toda la historia del desarrollo web) y su manejo **virtual del DOM**, nuestra herramienta elegida para materializar nuestra idea y convertirla en solución. Si llegaron hasta acá se preguntaran ¿por que diseñamos anteriormente nuestros datos primero? y la respuesta es mas sencilla de lo que parece, simplemente porque diseñar nos ahorra tiempo. Desde el momento cero sabemos como va a ser la forma de nuestra entidad persona, entendemos como Persona y Alumno se comportan y ademas, como si fuera poco, tenemos los datos que estas entidades van a contener dentro de nuestra aplicación. Ahora, ¿Que papel juega React en todo esto?
+**React** (haciendo la vista gorda obviamente a toda la historia del desarrollo web) y su manejo **virtual del DOM**, nuestra herramienta elegida para materializar nuestra idea y convertirla en solución. Si llegaron hasta acá se preguntaran ¿por que diseñamos anteriormente nuestros datos primero? y la respuesta es mas sencilla de lo que parece, simplemente porque diseñar nos ahorra tiempo. Desde el momento cero sabemos como va a ser la forma de nuestra entidad persona, entendemos como Persona y Alumno se comportan y ademas, como si fuera poco, tenemos los datos que estas entidades van a contener dentro de nuestra aplicación. Ahora, ¿Que papel juega React en todo esto?
 
 Según la pagina oficial de la herramienta, 
 
@@ -113,18 +121,85 @@ Según la pagina oficial de la herramienta,
 
 Analizando la frase, podemos hacer una inferencia y relacionar nuestros modelos a lo que React entienda e interprete, interfaces. Entonces, tomamos el lápiz y el papel (que estaban como requerimientos) y boceamos lo que vendría a ser lo que la persona observa en la aplicación cuando es un alumno, su perfil y la pagina principal:
 
+##### Pagina de Inicio
 ![Pagina de Inicio](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/vista_alumno.png?token=ADFY5IDSKSFOPS5R6DUKNA27M2L5A)
+
+##### Perfil de Usuario
+
 ![Perfil de Usuario](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/vista_alumno_perfil.png?token=ADFY5IBUXU6L2URTBJA2M227M2L5C)
 
 Ya tenemos la estructura de la aplicación, como se diagramara y como sera la aplicacion para los usuarios finales. Ahora vamos a empezar a desmembrar nuestro boceto y entender varios **conceptos esenciales de React** (a mi parecer, de los mas importantes).
 
 ### Componentes
+Para comprender realmente como React funciona tenemos que entender que son los componentes, y para eso, que mejor que mostrarlo mediante un ejemplo:
 
+Volviendo a la imagen anterior, la del perfil de usuario del alumno:
+
+Viendo la imagen, les propongo que hagan el ejemplo mental de dividir por funcionalidades la imagen, es decir, dividir por bloques cada parte de la imagen y entender que corresponde a que en cuanto a funcionalidades. 
+
+React posee la simpleza de poder "separar" contenidos visuales y traspasarlos fácilmente a código.
+
+Comenzamos con la **vista general del perfil** y como podemos observar, hay una division lógica entre el encabezado de la pagina, la navegación y lo que respecta a la información del alumno
+
+Ahora, imagínense como si estuviéramos observando el boceto, pero por capas, la primer capa, llamemos capa cero, representa un vistazo general del boceto, la division de funcionalidades mas superficial que engloba las funcionalidades similares. Ahora, observando la imagen, podemos ver que tenemos claramente dos nuevas divisiones: **PerfilUsuario** y **Navegación** (los nombres deben ser consistentes con las funcionalidades que se engloban para aumentar escalabilidad y mantenimiento de código). 
+
+Perfecto, iterando sobre las divisiones, independientemente una de la otra, obtenemos cada vez mas partes en cuestión pertenecientes a estas partes lógicas de la aplicación. Obteniendo así una estructura en árbol como la siguiente
+
+```json
+Usuario {
+	PerfilUsuario : [
+		DatosUsuario,
+		ImagenUsuario
+	],
+	Navegacion : [
+		Encabezado : [
+			Logo
+		],
+		Menu
+	]
+}
+```
+
+Este ejercicio de iterar sobe ele diseño se puede realizar una y otra vez, siguiendo el pseudocodigo:
+
+```
+1. dividir funcionalidades logicas
+2. nombrar la totalidad de divisiones con un nombre descriptivo
+3. tomar un objeto, evaluar si hay divisiones para hacer:
+	2.1 si las hay, volver al paso 1 con el objeto como un todo y comenzar desde cero
+	2.2 si no las hay, considerar el componente como un todo
+4. si no hay mas elementos, terminar de dividir
+```
+
+Una vez que finalizamos la division de lógica dentro de nuestra vista, procedemos a crear los componentes, tal cual se representan en el árbol.
+
+> En este tutorial utilizaremos la nueva nomenclatura de
+> componentes de React 16
+
+Por lo que obtenemos, a modo de ejemplo:
+
+```javascript
+import React from 'react';
+import Navegacion from './src/components/Navegacion';
+import PerfilUsuario from './src/components/PerfilUsuario';
+
+const VistaPerfil = () => {
+	return (
+		<>
+			<Navegacion></Navegacion>
+			<PerfilUsuario></PerfilUsuario>
+		</>
+	);
+}; 
+
+export default PerfilUsuario;
+```
 
 ### Propiedades
 
 
 ### Estados
+
 
 Espero que este tutorial no haya sido un tutorial mas de una larga lista de tutoriales sino algo que puedas entender con gusto y compartir a aquellas personas que intentan entender el flujo de information de estos días y largarse a desarrollar algo por su cuenta. El conocimiento por suerte, y hasta ahora, se comparte.
 
