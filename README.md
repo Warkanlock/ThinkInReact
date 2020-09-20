@@ -1,10 +1,11 @@
 
+  
 ![enter image description here](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/logo.png)  
 
 ## Un tutorial para entender cómo idear y desarrollar ideas utilizando React
 
 > Antes de empezar,  este no es un tutorial basado en etapas o pasos
-> para obtener un resultado funcional sino que centra la idea las bases
+> para obtener un resultado funcional sino que plantea la idea en las bases
 > fundamentales del desarrollo web usando React y proponiendo pequeños
 > fragmentos de código para ayudar al lector a la compresión.
 
