@@ -308,8 +308,34 @@ Es importante entender que para compartir propiedades a través de muchos objeto
 Los estados en React son valores que puede tomar un componente y existen dentro del mismo, no son provistos por nadie externo. Ejemplificando, el componente **Alumno** puede tomar de estado diferentes valores para una propiedad interna, y estos valores pueden alterar y/o decidir su comportamiento a la hora de mostrarse en nuestra aplicación. Existen maneras de manejar estados pero en este tutoriales vamos a usar los **[Hooks](https://es.reactjs.org/docs/hooks-intro.html)**
 
 # Uniendo todo
-## Un ejemplo practico sencillo
+#### Un ejemplo practico para entender como empezar a diseñar usando React
+
 Ahora si, manos a la obra, vamos a llevar a código real y funcional la idea del sistema educativo que comentamos y usamos de ejemplo anteriormente.
+
+Primero que nada vamos a crear un nuevo directorio dentro de una carpeta vacía en nuestro sistema operativo y correr el comando (antes de esto, ver [Anexo](#anexo)) para generar el archivo de configuración inicial de Node.JS
+
+```npm
+npm init --y
+```
+Luego de esto, un nuevo archivo se vera reflejado en nuestro directorio llamado ```package.json```. Este archivo es esencial para entender el desarrollo web moderno y les recomiendo [el siguiente articulo](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/#:~:text=All%20npm%20packages%20contain%20a,as%20handle%20the%20project%27s%20dependencies.&text=js%20project.) para entenderlo en profundidad. Pero para simplificar es el encargado de manera los paquetes y configuraciones para correr nuestra aplicación.
+
+Una vez generado el archivo de configuración inicial procederemos a usar ```create-react-app```. Para eso, luego de instalar Node.JS en nuestro ordenador vamos a proceder a disparar el comando [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b)
+
+```npm
+npx create-react-app app-ejemplo
+```
+
+Esto, dentro del directorio donde estemos, nos va a generar un punto de partida para comenzar a desarrollar. ```create-react-app``` creara un conjunto de paquetes, configuraciones y archivos que nos harán la vida mas sencilla para aprender a desarrollar usando React.
+
+![Directorio](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/captura_tutorial_node.png)
+
+Pueden moverse a la carpeta ```app-ejemplo``` creada por el comando y ejecutar ```npm start``` para correr nuestra primera aplicación React y luego acceder mediante la url provista en la consola
+
+![Consola de Comandos](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/captura_tutorial_node_2.png)
+
+> Es posible usar React desde [diferentes puntos de entrada](https://es.reactjs.org/docs/create-a-new-react-app.html): desde un paquete NPM (Node package manager) hasta un CDN incluido en un archivo HTML
+
+
 
 Espero que este tutorial no haya sido un tutorial mas de una larga lista de tutoriales sino algo que puedas entender con gusto y compartir a aquellas personas que intentan entender el flujo de information de estos días y largarse a desarrollar algo por su cuenta. El conocimiento por suerte, y hasta ahora, se comparte.
 
