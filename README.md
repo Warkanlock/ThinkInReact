@@ -1,4 +1,5 @@
 
+
   
 ![enter image description here](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/logo.png)  
 
@@ -333,7 +334,18 @@ Pueden moverse a la carpeta ```app-ejemplo``` creada por el comando y ejecutar `
 
 ![Consola de Comandos](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/captura_tutorial_node_2.png)
 
-> Es posible usar React desde [diferentes puntos de entrada](https://es.reactjs.org/docs/create-a-new-react-app.html): desde un paquete NPM (Node package manager) hasta un CDN incluido en un archivo HTML
+> Es posible usar React desde [diferentes puntos de entrada](https://es.reactjs.org/docs/create-a-new-react-app.html): desde un paquete NPM (Node package manager) hasta un CDN incluido en un archivo HTML. 
+
+## Del papel a la realidad
+Procederemos ahora, a implementar lo que discutimos anteriormente en [Pensar en React](#pensar-en-react) sobre la division logica de componentes dentro de nuestros bocetos. Tomaremos nuevamente esas imagenes, las de perfil y la de inicio y las convertiremos en codigo React.
+
+### Crear Componentes
+
+### Comunicar Componentes
+
+### Generar Rutas
+
+### Estilos
 
 
 
