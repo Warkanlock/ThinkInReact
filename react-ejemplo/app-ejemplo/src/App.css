@@ -4,30 +4,11 @@ header {
   margin: auto;
   color: black;
   background-color: #f6f6f6;
+  position: relative;
   text-align: center;
-}
-
-.container-encabezado {
-  display: flex;
-  align-items: center;
-}
-
-.titulo-encabezado {
-  padding-right: 25px;
-  padding-left: 10px;
-  font-weight: 700;
-  margin: 0;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none;
-}
-
-.card-item-curricula {
-  padding: 20px;
-  margin: 20px;
+  -webkit-box-shadow: -1px 1px 29px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: -1px 1px 29px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: -1px 1px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 body {
@@ -70,4 +51,34 @@ li a:hover {
   padding-top: 20px;
   margin-top: 20px;
   position: fixed;
+  -webkit-box-shadow: -1px 1px 29px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: -1px 1px 29px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: -1px 1px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.division-curriculas {
+  padding-top: 1rem;
+}
+
+.container-encabezado {
+  display: flex;
+  align-items: center;
+}
+
+.titulo-encabezado {
+  padding-right: 25px;
+  padding-left: 10px;
+  font-weight: 700;
+  margin: 0;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.card-item-curricula {
+  padding: 20px;
+  margin: 20px;
 }

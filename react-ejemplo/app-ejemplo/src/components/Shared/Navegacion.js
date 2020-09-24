@@ -1,5 +1,6 @@
 import React from "react";
 import Encabezado from "./Encabezado";
+import { Link } from "react-router-dom";
 
 const Navegacion = () => {
   return (
@@ -9,10 +10,10 @@ const Navegacion = () => {
           <Encabezado></Encabezado>
           <ul>
             <li>
-              <a href="/inicio">Inicio</a>
+              <Link to="/">Inicio</Link>
             </li>
             <li>
-              <a href="/cursos">Cursos</a>
+              <Link to="/cursos">Cursos</Link>
             </li>
           </ul>
         </div>

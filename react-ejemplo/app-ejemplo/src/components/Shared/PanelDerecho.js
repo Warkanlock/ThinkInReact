@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PanelDerecho = (props) => {
   return (
@@ -10,12 +11,12 @@ const PanelDerecho = (props) => {
             <p className="card-text text-center">
               Ingrese a su perfil de usuario
             </p>
-            <a
-              href="#"
+            <Link
+              to="/perfil"
               className="btn btn-primary btn-success btn-lg btn-block"
             >
               Ir
-            </a>
+            </Link>
           </div>
         </div>
         <div className="card card-item-curricula">
@@ -24,9 +25,9 @@ const PanelDerecho = (props) => {
             <p className="card-text text-center">
               Explore las curriculas actualizadas
             </p>
-            <a href="#" className="btn btn-secondary btn-lg btn-block">
+            <Link to="/cursos" className="btn btn-secondary btn-lg btn-block">
               Buscar
-            </a>
+            </Link>
           </div>
         </div>
       </div>
