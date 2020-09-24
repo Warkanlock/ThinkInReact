@@ -4,7 +4,7 @@ import { crearCurriculas } from "../../../Shared/FakeData";
 
 function Curriculas(props) {
   return (
-    <div>
+    <>
       {crearCurriculas(3).map((curricula) => {
         return (
           <Curricula
@@ -13,7 +13,7 @@ function Curriculas(props) {
           ></Curricula>
         );
       })}
-    </div>
+    </>
   );
 }
 
