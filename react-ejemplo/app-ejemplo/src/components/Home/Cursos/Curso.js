@@ -1,23 +1,36 @@
 import React from "react";
+import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
+import { useStyles } from "../../Shared/useStyles";
 
 const Curso = (props) => {
+  const classes = useStyles();
+
   return (
-    <div class="division-curriculas">
-      <div class="jumbotron">
-        <h1 class="display-4">{props.informacion.nombre}</h1>
-        <p class="lead">{props.informacion.descripcion}</p>
-        <hr class="my-4" />
-        <p>
+    <Card className={classes.cursoRoot} variant="outlined">
+      <CardContent>
+        <Typography
+          className={classes.cursoTitle}
+          color="textSecondary"
+          gutterBottom
+        >
+          {props.informacion.nombre}
+        </Typography>
+        <Typography variant="h5" component="h2">
+          {props.informacion.descripcion}
+        </Typography>
+        <Typography variant="h6" component="h2">
           Dictado por {props.informacion.otorga} con un total de{" "}
           {props.informacion.usuarios} alumnos
-        </p>
-        <p class="lead">
-          <a class="btn btn-primary btn-lg" href="#" role="button">
-            Cursar
-          </a>
-        </p>
-      </div>
-    </div>
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="large">Cursar</Button>
+      </CardActions>
+    </Card>
   );
 };
 

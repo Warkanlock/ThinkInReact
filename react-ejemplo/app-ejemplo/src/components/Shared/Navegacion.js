@@ -1,24 +1,29 @@
 import React from "react";
-import Encabezado from "./Encabezado";
-import { Link } from "react-router-dom";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import { useStyles } from "./useStyles";
 
 const Navegacion = () => {
+  const classes = useStyles();
+
   return (
-    <>
-      <header>
-        <div className="container-encabezado">
-          <Encabezado></Encabezado>
-          <ul>
-            <li>
-              <Link to="/">Inicio</Link>
-            </li>
-            <li>
-              <Link to="/cursos">Cursos</Link>
-            </li>
-          </ul>
-        </div>
-      </header>
-    </>
+    <div className={classes.navegacionRoot}>
+      <AppBar position="fixed" color="primary">
+        <Toolbar className={classes.navegacionCustomize}>
+          <Typography variant="h6" className={classes.navegacionTitle}>
+            Educacion Libre
+          </Typography>
+          <Button href="/" color="inherit">
+            INICIO
+          </Button>
+          <Button href="/cursos" color="inherit">
+            CURSOS
+          </Button>
+        </Toolbar>
+      </AppBar>
+    </div>
   );
 };
 

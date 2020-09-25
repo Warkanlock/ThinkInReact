@@ -1,32 +1,27 @@
 import React from "react";
 import PanelDerecho from "../../Shared/PanelDerecho";
-import Curriculas from "./Curriculas/Curriculas";
-import { Switch, Route } from "react-router-dom";
-import Cursos from "../Cursos/Cursos";
-import { Grid } from "@material-ui/core";
+import { Box, Grid } from "@material-ui/core";
+import MapRoutes from "../../Shared/MapRoutes";
 
 const Dashboard = () => {
   return (
     <>
       <div className="dashboard-container">
-        <Grid container>
-          <Grid item xs={6}>
-            <Grid container justify="center">
-              <Grid>
-                <Switch>
-                  <Route exact path="/">
-                    <Curriculas></Curriculas>
-                  </Route>
-                  <Route exact path="/cursos">
-                    <Cursos></Cursos>
-                  </Route>
-                </Switch>
+        <Grid container spacing={3}>
+          <Grid item xs={8}>
+            <Box width={1} m={2}>
+              <Grid container justify="center">
+                <Grid item xs={12}>
+                  <MapRoutes></MapRoutes>
+                </Grid>
               </Grid>
-            </Grid>
+            </Box>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={1}>
             <Grid container justify="center">
-              <PanelDerecho></PanelDerecho>
+              <Grid item xs={12}>
+                <PanelDerecho></PanelDerecho>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
