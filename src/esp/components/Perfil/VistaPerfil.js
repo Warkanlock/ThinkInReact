@@ -11,4 +11,4 @@ const VistaPerfil = () => {
   );
 };
 
-export default PerfilUsuario;
+export default VistaPerfil;

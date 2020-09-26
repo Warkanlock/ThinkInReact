@@ -158,13 +158,13 @@ React has the simplicity of being able to "separate" visual contents and transfe
 
 We start with the **profile overview** and as we can see, there is a logical split between the page header and the student information
 
-![First Split](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/eng/componentes_1.png)
+![First Split](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/eng/comp_1.png)
 
 Now, imagine as if we were looking at the sketch, but in layers, the first layer, let's call it layer zero, represents an overview of the sketch, the most superficial division of functionality that encompasses similar functionality. Now, looking at the image, we can see that we clearly have two new divisions: **UserProfile** and Navigation\*\* (the names should be consistent with the encompassing functionalities to increase scalability and code maintenance).
 
 Perfect, iterating over the divisions, independently of each other, we obtain more and more parts in question belonging to these logical parts of the application.
 
-![Second Split](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/eng/componentes_2.png)
+![Second Split](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/eng/comp_2.png)
 
 By transposing the previous images to something closer to the code, we can obtain a tree structure like the following one:
 
