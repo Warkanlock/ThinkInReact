@@ -1,5 +1,5 @@
 import React from "react";
-import Curriculum from "./Curricula";
+import Curriculum from "./Curriculum";
 import { createCurriculums } from "../../../Shared/FakeData";
 import { Box } from "@material-ui/core";
 
@@ -10,9 +10,9 @@ function Curriculums(props) {
         return (
           <Box p={1}>
             <Curriculum
-              key={curriculum.nombre}
-              name={curriculum.nombre}
-              description={curriculum.descripcion}
+              key={curriculum.name}
+              name={curriculum.name}
+              description={curriculum.description}
             ></Curriculum>
           </Box>
         );

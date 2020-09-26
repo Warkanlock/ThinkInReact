@@ -16,10 +16,10 @@ const Navbar = () => {
             Free Education for Everyone
           </Typography>
           <Button href="/" color="inherit">
-            CURRICULUMS
+            curriculums
           </Button>
-          <Button href="/cursos" color="inherit">
-            COURSES
+          <Button href="/courses" color="inherit">
+            courses
           </Button>
         </Toolbar>
       </AppBar>

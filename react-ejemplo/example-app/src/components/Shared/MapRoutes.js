@@ -1,6 +1,6 @@
 import React from "react";
 import Courses from "../Home/Courses/Courses";
-import Curriculums from "../Home/Inicio/Curriculums/Curriculums";
+import Curriculums from "../Home/Root/Curriculums/Curriculums";
 import { Switch, Route } from "react-router-dom";
 import UserProfile from "../Profile/UserProfile";
 

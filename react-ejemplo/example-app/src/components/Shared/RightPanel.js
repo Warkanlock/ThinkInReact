@@ -10,7 +10,7 @@ import Divider from "@material-ui/core/Divider";
 import { Box, Paper } from "@material-ui/core";
 import faker from "faker";
 import { useStyles } from "./useStyles";
-import ListOfItems from "../Home/Inicio/ListOfItems";
+import ListOfItems from "../Home/Root/ListOfItems";
 
 const RightPanel = (props) => {
   const classes = useStyles();
