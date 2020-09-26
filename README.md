@@ -342,7 +342,7 @@ You can move to the `app-example` folder created by the command and run `npm sta
 
 > It is possible to use React from [different entry points](https://es.reactjs.org/docs/create-a-new-react-app.html): from a NPM package (Node package manager) to a CDN included in an HTML file
 
-Once inside, after entering our application (entering the local address shown in the console after running `npm start`), we will find our application running with the React logo on the center of the screen, so now, I invite you to take a look into `react-example` to check how I modify and add new classes into the application to fit in our first design.
+Once inside, after entering our application (entering the local address shown in the console after running `npm start`), we will find our application running with the React logo on the center of the screen, so now, I invite you to take a look into `react-src` to check how I modify and add new classes into the application to fit in our first design.
 
 ![App Running](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/eng/screenshot_app_running.png)
 

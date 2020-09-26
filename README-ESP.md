@@ -342,7 +342,7 @@ Pueden moverse a la carpeta `app-ejemplo` creada por el comando y ejecutar `npm 
 
 > Es posible usar React desde [diferentes puntos de entrada](https://es.reactjs.org/docs/create-a-new-react-app.html): desde un paquete NPM (Node package manager) hasta un CDN incluido en un archivo HTML
 
-Una vez dentro, luego de ingresar nuestra aplicación (ingresando a la dirección local que se muestra en consola luego de correr `npm start`), encontraremos nuestra aplicación funcionando con el logo de React en el centro de la pantalla, así que ahora, los invito a echar un vistazo a `react-example` para comprobar cómo modifico y añado nuevas clases para que encajen en nuestro primer diseño.
+Una vez dentro, luego de ingresar nuestra aplicación (ingresando a la dirección local que se muestra en consola luego de correr `npm start`), encontraremos nuestra aplicación funcionando con el logo de React en el centro de la pantalla, así que ahora, los invito a echar un vistazo a `react-src` para comprobar cómo modifico y añado nuevas clases para que encajen en nuestro primer diseño.
 
 ![enter image description here](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/esp/captura_pantalla_tutorial.png)
 
