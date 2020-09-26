@@ -1,6 +1,6 @@
 
   
-![enter image description here](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/logo.png)  
+![Logo](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/logo.png)  
 
 ## Un tutorial para entender cómo idear y desarrollar ideas utilizando React
 
