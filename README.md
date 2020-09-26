@@ -1,6 +1,6 @@
 
   
-![Logo](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/logo.png)  
+![enter image description here](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/logo.png)  
 
 ## Un tutorial para entender cómo idear y desarrollar ideas utilizando React
 
@@ -348,7 +348,7 @@ Pueden leer y los invito a que lo hagan dentro del directorio [``react-ejemplo/a
  - Para los estilos visuales, decidí utilizar [Material-UI](https://material-ui.com/) dada la capacidad de hablar en los mismos términos que React y no perder la idea del tutorial para centrarlo en un de diseño.
 
 ## Terminar para empezar
-Un consejo personal, que en mi experiencia personal me sirvió, es tratar de entender un tutorial no como una sucesión de cosas servidas en una bandeja para consumirlas, sino una manera para entender lo que es capaz una herramienta. Es por eso que los animo a recorrer repositorios que les interesen para empezar a leer código. Es importante entender que el proceso de aprendizaje no es magia pero tampoco es seguir recetas. Es un balance interesante entre: diseñar, pensar e implementar, donde priorizan las ideas por sobre las herramientas que elijamos a la hora de pensar para poder. Al final del día, las herramientas existen y los manuales respectivos las acompañan. Empezar en el desarrollo web consiste mayormente en leer documentaciones, entender que nos quiere mostrar un tutorial y comprender el camino que busca enseñarnos una guía. Es importante y necesario entender que sin nuestra capacidad de pensar, no hay herramienta que nos salve la vida.
+Un consejo personal, que en mi experiencia personal me sirvió bastante, es tratar de entender un tutorial no como una sucesión de cosas servidas en una bandeja para consumirlas, sino una manera para entender lo que es capaz una herramienta. Es por eso que los animo a recorrer repositorios que les interesen para empezar a leer código. Es importante entender que el proceso de aprendizaje no es magia pero tampoco es seguir recetas. Es un balance interesante entre: diseñar, pensar e implementar, donde priorizan las ideas por sobre las herramientas que elijamos a la hora de pensar para poder. Al final del día, las herramientas existen y los manuales respectivos las acompañan. Empezar en el desarrollo web consiste mayormente en leer documentaciones, entender que nos quiere mostrar un tutorial y comprender el camino que busca enseñarnos una guía. Es importante y necesario entender que sin nuestra capacidad de pensar, no hay herramienta que nos salve la vida.
 
 Espero que este tutorial no haya sido un tutorial mas de una larga lista de tutoriales sino algo que puedas entender con gusto y compartir a aquellas personas que intentan entender el flujo de information de estos días y largarse a desarrollar algo por su cuenta. 
 
