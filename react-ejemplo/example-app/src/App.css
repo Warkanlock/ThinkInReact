@@ -1,0 +1,82 @@
+header {
+  top: 0;
+  padding: auto;
+  margin: auto;
+  color: black;
+  background-color: #f6f6f6;
+  position: relative;
+  text-align: center;
+  -webkit-box-shadow: -1px 1px 29px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: -1px 1px 29px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: -1px 1px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0%;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+li {
+  display: inline;
+}
+
+li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 500;
+  transition: all ease 1s;
+}
+
+li a:hover {
+  background-color: rgb(94, 107, 107);
+  color: black;
+  text-decoration: none;
+  transition: all ease 1s;
+}
+
+.columna-derecha-sticky {
+  background-color: #f6f6f6;
+  height: 27rem;
+  border-radius: 20px;
+  padding-top: 23px;
+  margin-top: 25px;
+  position: fixed;
+}
+
+.division-curriculas {
+  padding-top: 1rem;
+}
+
+.container-encabezado {
+  display: flex;
+  align-items: center;
+}
+
+.titulo-encabezado {
+  padding-right: 25px;
+  padding-left: 10px;
+  font-weight: 700;
+  margin: 0;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.card-item-curricula {
+  padding: 20px;
+  margin: 20px;
+}
