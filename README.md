@@ -101,7 +101,7 @@ Taking into account the case study above, we can infer that there are four entit
 3.  Professor
 4.  School
 
-![Class Diagram](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/eng/diagrama_entidades.png)
+![Class Diagram](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/eng/class_diagram.png)
 
 Obviously we are simplifying the situation and taking it to the ideal, where there are no more relationships than those in the diagram.
 
@@ -140,11 +140,11 @@ By analyzing the sentence, we can make an inference and relate our models to wha
 
 ##### Home Page
 
-![Home Page](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/eng/vista_alumno.png)
+![Home Page](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/eng/dashboard_view.png)
 
 ##### User Profile
 
-![User Profile](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/eng/vista_alumno_perfil.png)
+![User Profile](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/eng/user_profile_view.png)
 
 We already have the structure of the application, how it will be diagrammed and how the application will be for the end users. Now let's start to dismember our sketch and understand several **essential concepts of React** (in my opinion, one of the most important).
 
@@ -304,7 +304,7 @@ function Parent(props){
 
 Seen graphically we can see something of the way:
 
-![Map of States](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/eng/mapa_estados.png)
+![Map of States](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/eng/state_flow.png)
 
 It is important to understand that to share properties through many objects it is not necessary to send them as properties, in fact this is a bad practice and is called **[Prop Drilling](https://kentcdodds.com/blog/prop-drilling/)**. That's why, there is something called Context, which simply encompasses a set of **_states_** and then invokes it without the need to pass everything as properties to the objects.
 
