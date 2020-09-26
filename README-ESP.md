@@ -329,14 +329,14 @@ Luego de esto, un nuevo archivo se vera reflejado en nuestro directorio llamado 
 Una vez generado el archivo de configuración inicial procederemos a usar `create-react-app`. Para eso, luego de instalar Node.JS en nuestro ordenador vamos a proceder a disparar el comando [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b)
 
 ```npm
-npx create-react-app app-ejemplo
+npx create-react-app ejemplo-app
 ```
 
 Esto, dentro del directorio donde estemos, nos va a generar un punto de partida para comenzar a desarrollar. `create-react-app` creara un conjunto de paquetes, configuraciones y archivos que nos harán la vida mas sencilla para aprender a desarrollar usando React.
 
 ![Directorio](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/esp/captura_tutorial_node.png)
 
-Pueden moverse a la carpeta `app-ejemplo` creada por el comando y ejecutar `npm start` para correr nuestra primera aplicación React y luego acceder mediante la url provista en la consola
+Pueden moverse a la carpeta `ejemplo-app` creada por el comando y ejecutar `npm start` para correr nuestra primera aplicación React y luego acceder mediante la url provista en la consola
 
 ![Consola de Comandos](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/esp/captura_tutorial_node_2.png)
 
@@ -346,7 +346,7 @@ Una vez dentro, luego de ingresar nuestra aplicación (ingresando a la direcció
 
 ![enter image description here](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/esp/captura_pantalla_tutorial.png)
 
-Pueden leer y los invito a que lo hagan dentro del directorio [`react-ejemplo/app-ejemplo`](https://github.com/Warkanlock/ComoPensarEnReact) dentro del repositorio. Traten de entender la metamorfosis de los objetos que diseñamos en un principio (`/src`) y luego observar la implementation real dentro de nuestra aplicación web.
+Pueden leer y los invito a que lo hagan dentro del directorio [`react-ejemplo/ejemplo-app`](https://github.com/Warkanlock/ComoPensarEnReact) dentro del repositorio. Traten de entender la metamorfosis de los objetos que diseñamos en un principio (`/src`) y luego observar la implementation real dentro de nuestra aplicación web.
 
 ### Unas ultimas aclaraciones
 

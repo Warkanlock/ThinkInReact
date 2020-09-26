@@ -329,14 +329,14 @@ After this, a new file will be reflected in our directory called `package.json`.
 Once the initial configuration file is generated we will proceed to use `create-react-app`. To do this, after installing Node.JS on your computer we will proceed to fire the command [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b)
 
 ```
-npx create-react-app app-example
+npx create-react-app example-app
 ```
 
 This, within the directory where we are, will generate a starting point to start developing. `create-react-app` will create a set of packages, configurations and files that will make our lives easier to learn how to develop using React.
 
 ![Directory](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/eng/captura_tutorial_node.png)
 
-You can move to the `app-example` folder created by the command and run `npm start` to run our first React application and then access it through the url provided in the console
+You can move to the `example-app` folder created by the command and run `npm start` to run our first React application and then access it through the url provided in the console
 
 ![Command Console](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/eng/captura_tutorial_node_2.png)
 
@@ -346,7 +346,7 @@ Once inside, after entering our application (entering the local address shown in
 
 ![App Running](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/eng/screenshot_app_running.png)
 
-You can read and I invite you to do so within the directory [`react-example/app-example`](https://github.com/Warkanlock/ComoPensarEnReact) within the repository. Try to understand the metamorphosis of the objects we designed at first (`/src`) and then observe the real implementation within our web application.
+You can read and I invite you to do so within the directory [`react-example/example-app`](https://github.com/Warkanlock/ComoPensarEnReact) within the repository. Try to understand the metamorphosis of the objects we designed at first (`/src`) and then observe the real implementation within our web application.
 
 ### A few final clarifications
 
