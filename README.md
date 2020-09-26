@@ -1,4 +1,4 @@
-![Logo](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/logo.png)
+![Logo](https://raw.githubusercontent.com/Warkanlock/ComoPensarEnReact/master/imgs/eng/logo.png)
 
 ## A tutorial to understand how to think up and develop ideas using React
 
