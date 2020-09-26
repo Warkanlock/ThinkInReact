@@ -11,14 +11,14 @@
 
 1. [Introduction](#introduction)
 2. [Requirements](#requirements)
-3. [Learn to design](#learn-to-design)
+3. [Learning to design](#learning-to-design)
 4. [About tutorials and documentation](#about-tutorials-and-documentation)
 5. [Choose then embark](#choose-then-embark)
 6. [Why React](#why-react)
 7. [Example Case](#example-case)
-8. [Thinking about React](#thinking-in-react)
-9. [Putting all together](#putting-all-together)
-10. [Annex](#annex)
+8. [Thinking in React](#thinking-in-react)
+9. [Bringing it all together](#bringing-it-all-together)
+10. [Appendix](#Appendix)
 
 # Introduction
 
@@ -128,7 +128,7 @@ class
 
 It is important to understand that classes structure how data will be displayed, understood and manipulated later in the system. That is why it is very important to define well the schemes and structures that will take our data. Here we can observe that a Student basically corresponds to a Person, and I want you to keep that relationship in mind, because we are going to start building our idea based on this relationship.
 
-# Thinking about React
+# Thinking in React
 
 **React** (obviously turning a blind eye to the whole history of web development) and its management **virtual DOM**, our tool chosen to materialize our idea and turn it into a solution. If you have come this far you may ask yourself why we designed our data first, and the answer is simpler than it seems, simply because designing saves us time. From the moment zero we know how will be the form of our entity person, we understand as Person and Student behave and also, as if it were not enough, we have the data that these entities will contain within our application. Now, what role plays React in all this?
 
@@ -318,7 +318,7 @@ The states in React are values that a component can take and exist within it, th
 
 Now yes, let's get to work, we are going to take to real and functional code the idea of the educational system that we commented and used as an example before.
 
-First of all we are going to create a new directory inside an empty folder in our operating system and run the command (before this, see [Annex](#annex)) to generate the initial configuration file of Node.JS
+First of all we are going to create a new directory inside an empty folder in our operating system and run the command (before this, see [Appendix](#Appendix)) to generate the initial configuration file of Node.JS
 
 ```
 npm init --y
