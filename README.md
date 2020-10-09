@@ -326,7 +326,7 @@ npm init --y
 
 After this, a new file will be reflected in our directory called `package.json`. This file is essential to understand modern web development and I recommend [the following article](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/#:~:text=All%20npm%20packages%20contain%20a,as%20handle%20the%20project%27s%20dependencies.&text=js%20project.) to understand it in depth. But to simplify it is the one in charge of the packages and configurations to run our application.
 
-Once the initial configuration file is generated we will proceed to use `create-react-app`. To do this, after installing Node.JS on your computer we will proceed to fire the command [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b)
+Once the initial configuration file is generated we will proceed to use `create-react-app`. To do this, we need to run the following command (after installing Node.JS) [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b)
 
 ```
 npx create-react-app example-app
